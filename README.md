@@ -1,20 +1,43 @@
-# Keyword-Based Quiz (ML-style)
+# 🧠 Keyword-Based Quiz (ML-style) with OCR
 
-This project is a lightweight, **ML-style** quiz app that scores free-text answers using **keyword/phrase matching** with **synonyms** and **weights**. It uses Streamlit for the UI.
+A lightweight ML-style quiz app that scores free-text or handwritten answers using keyword/phrase matching, synonyms, and weights. Built with Streamlit for a clean, interactive UI.
 
 ## ✨ Features
-- Semicolon-separated keyword specs per question
-- Synonyms/alternatives with `|`
-- Optional weights with `:number`
-- Per-question score and overall percentage
-- Downloadable results CSV
-- Easy to extend/reuse
 
-## 🔧 Install & Run
-```bash
+✅ Type your answer or upload a handwritten answer (OCR)
+
+✅ Keyword matching with synonyms (|) and weights (:number)
+
+✅ Per-question scoring and overall percentage
+
+✅ Downloadable results CSV
+
+✅ Easy to extend and customize questions
+
+✅ Optional keyword highlighting in results (future upgrade)
+
+## 🔧 Installation & Run
+
+1.Clone the repo:
+
+git clone https://github.com/YourUsername/keyword-quiz-ocr.git
+cd keyword-quiz-ocr
+
+2.Install dependencies:
+
 pip install -r requirements.txt
+
+3.Install Tesseract OCR engine:
+
+Windows: UB Mannheim build
+macOS: brew install tesseract
+Linux: sudo apt install tesseract-ocr
+Ensure eng.traineddata exists in tessdata folder.
+
+4.Run the app:
+
 streamlit run app.py
-```
+
 
 ## 🗂️ Data format
 `data/questions.csv` must include:
